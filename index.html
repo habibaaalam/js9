@@ -1,0 +1,132 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>JavaScript Arrays</title>  
+    <script>  
+        // 1. Declare an empty array using JS literal notation to store student names.  
+        var studentNamesLiteral = [];  
+        
+        // 2. Declare an empty array using JS object notation to store student names.  
+        var studentNamesObject = new Array();  
+        
+        // 3. Declare and initialize a strings array.  
+        var stringsArray = ["Alice", "Bob", "Charlie"];  
+        
+        // 4. Declare and initialize a numbers array.  
+        var numbersArray = [10, 20, 30, 40, 50];  
+        
+        // 5. Declare and initialize a boolean array.  
+        var booleanArray = [true, false, true, false];  
+        
+        // 6. Declare and initialize a mixed array.  
+        var mixedArray = ["Alice", 30, true, null];  
+        
+        // 7. Declare and Initialize an array of educational qualifications.  
+        var qualifications = ["SSC", "HSC", "BCS", "BS", "BCOM", "MS", "M. Phil.", "PhD"];  
+        document.write("<h2>Available Qualifications:</h2>");  
+        document.write("<ul>");  
+        for (var i = 0; i < qualifications.length; i++) {  
+            document.write("<li>" + qualifications[i] + "</li>");  
+        }  
+        document.write("</ul>");  
+
+        // 8. Store student names and scores, and calculate percentages.  
+        var students = ["John", "Jane", "Doe"];  
+        var scores = [450, 470, 480];  
+        var totalMarks = 500;  
+
+        document.write("<h2>Student Scores and Percentages:</h2>");  
+        for (var i = 0; i < students.length; i++) {  
+            var percentage = (scores[i] / totalMarks) * 100;  
+            document.write("<p>" + students[i] + ": " + scores[i] + " (" + percentage.toFixed(2) + "%)</p>");  
+        }  
+
+        // 9. Color names array manipulation  
+        var colors = ["Red", "Green", "Blue"];  
+        document.write("<h2>Colors:</h2>");  
+        document.write("<p>" + colors.join(", ") + "</p>");  
+
+        // a. Add color to beginning  
+        var newColorStart = prompt("Enter a color to add to the beginning:");  
+        colors.unshift(newColorStart);  
+        document.write("<p>Updated Colors (after adding to beginning): " + colors.join(", ") + "</p>");  
+
+        // b. Add color to end  
+        var newColorEnd = prompt("Enter a color to add to the end:");  
+        colors.push(newColorEnd);  
+        document.write("<p>Updated Colors (after adding to end): " + colors.join(", ") + "</p>");  
+
+        // c. Add two colors to the beginning  
+        colors.unshift("Yellow", "Purple");  
+        document.write("<p>Updated Colors (after adding two colors to beginning): " + colors.join(", ") + "</p>");  
+
+        // d. Delete the first color  
+        colors.shift();  
+        document.write("<p>Updated Colors (after deleting the first color): " + colors.join(", ") + "</p>");  
+
+        // e. Delete the last color  
+        colors.pop();  
+        document.write("<p>Updated Colors (after deleting the last color): " + colors.join(", ") + "</p>");  
+
+        // f. Add color at a specific index  
+        var indexToAdd = prompt("At which index do you want to add a color?");  
+        var colorToAdd = prompt("What color do you want to add?");  
+        colors.splice(indexToAdd, 0, colorToAdd);  
+        document.write("<p>Updated Colors (after adding color at index " + indexToAdd + "): " + colors.join(", ") + "</p>");  
+
+        // g. Delete colors from a specific index  
+        var indexToDelete = prompt("At which index do you want to delete color(s)?");  
+        var countToDelete = prompt("How many colors do you want to delete?");  
+        colors.splice(indexToDelete, countToDelete);  
+        document.write("<p>Updated Colors (after deleting " + countToDelete + " color(s) from index " + indexToDelete + "): " + colors.join(", ") + "</p>");  
+
+        // 10. Store student scores in an array and sort  
+        var studentScores = [300, 450, 100, 280];  
+        studentScores.sort(function(a, b) { return a - b; });  
+        document.write("<h2>Sorted Student Scores:</h2>");  
+        document.write("<p>" + studentScores.join(", ") + "</p>");  
+
+        // 11. Initialize an array with city names and copy to selectedCities  
+        var cities = ["Karachi", "Lahore", "Islamabad", "Quetta", "Peshawar"];  
+        var selectedCities = cities.slice(0, 3);  
+        document.write("<h2>Selected Cities:</h2>");  
+        document.write("<p>" + selectedCities.join(", ") + "</p>");  
+
+        // 12. Create a single string from the array  
+        var arr = ["This ", "is ", "my ", "cat"];  
+        var singleString = arr.join("");  
+        document.write("<h2>Joined String:</h2>");  
+        document.write("<p>" + singleString + "</p>");  
+
+        // 13. FIFO Array Example  
+        var fifoArray = [];  
+        fifoArray.push("First");  
+        fifoArray.push("Second");  
+        fifoArray.push("Third");  
+        document.write("<h2>FIFO Array:</h2>");  
+        document.write("<p>" + fifoArray.join(", ") + "</p>");  
+
+        // 14. LIFO Array Example  
+        var lifoArray = [];  
+        lifoArray.push("One");  
+        lifoArray.push("Two");  
+        lifoArray.push("Three");  
+        document.write("<h2>LIFO Array:</h2>");  
+        document.write("<p>" + lifoArray.reverse().join(", ") + "</p>");  
+
+        // 15. Display a dropdown menu for phone manufacturers  
+        var phoneManufacturers = ["Apple", "Samsung", "Motorola", "Nokia", "Sony", "Haier"];  
+        document.write("<h2>Phone Manufacturers:</h2>");  
+        document.write("<select>");  
+        for (var i = 0; i < phoneManufacturers.length; i++) {  
+            document.write("<option>" + phoneManufacturers[i] + "</option>");  
+        }  
+        document.write("</select>");  
+    </script>  
+</head>  
+<body>  
+    <h1>JavaScript Arrays</h1>  
+</body>  
+</html>
